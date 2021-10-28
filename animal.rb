@@ -28,8 +28,11 @@ class Animal
   end
 end
 
-animal_1 = Animal.new("dog", 4, "Rex")
-animal_2 = Animal.new("spider", 8, "Wilma")
+animal_dog = Animal.new("dog", 4, "Rex")
+animal_spider = Animal.new("spider", 8, "Wilma")
 
-puts animal_1.speak()
-puts animal_2.speak()
+puts animal_dog.bring_a_stick()
+puts animal_spider.bring_a_stick()
+
+puts animal_dog.make_a_web()
+puts animal_spider.make_a_web()

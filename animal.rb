@@ -1,4 +1,5 @@
 class Animal
+	attr_accessor :name
 	def initialize (type, number_of_legs, name = "Unknown")
     @id = Random.rand(1..1000)
     @name = name
@@ -7,7 +8,11 @@ class Animal
   end
 
 	def speak
-    "Bla bla bla"
+    if @type == "dog"
+      "Woof, woof"
+    elsif @type == "spider"
+      "..."
+    end
   end
 
 	def id
@@ -21,18 +26,10 @@ class Animal
   def number_of_legs
     @number_of_legs
   end
-
-  def name
-    @name
-  end
-
-  def name=(value)
-    @name = value
-  end
 end
 
-animal_1 = Animal.new("Rex", 4)
-animal_2 = Animal.new("Bob", 8)
+animal_1 = Animal.new("dog", 4, "Rex")
+animal_2 = Animal.new("spider", 8, "Wilma")
 
-puts animal_1.name=('Lion')
-puts animal_1.name
+puts animal_1.speak()
+puts animal_2.speak()
